@@ -1,0 +1,13 @@
+version: '3.5'
+
+services: 
+
+    db:
+        image: postgres:9.4        
+        ports:
+            - "5432:5432"  
+        environment:
+            POSTGRES_PASSWORD: car
+            POSTGRES_USER: car
+        volumes:
+            - ./db/pgdata:/var/lib/postgresql/data
